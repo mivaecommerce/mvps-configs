@@ -1,0 +1,14 @@
+{
+	"files.eol": "\n",
+    "files.insertFinalNewline": true,
+	"postcssSorting.config": {
+        "order": [
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            "at-rules",
+            "rules"
+        ],
+        "properties-order": "alphabetical"
+    }
+}

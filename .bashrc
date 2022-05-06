@@ -1,0 +1,1 @@
+PATH=~/.npm-globals:$PATH

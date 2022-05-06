@@ -1,0 +1,28 @@
+# Miva Specific
+*.mvc
+merchdb.dat
+.mmt/
+
+# PHP / Composer
+composer.phar
+vendor/
+
+# Node
+node_modules/
+
+# Other
+bower_components/
+*.log*
+.htpasswd
+.DS_Store
+dist
+.env
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

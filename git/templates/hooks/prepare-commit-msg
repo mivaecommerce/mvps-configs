@@ -1,0 +1,28 @@
+#!/bin/sh
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+# -------------------------------------------------------
+# Automatically append Jira ID to Commit Message
+# https://git-scm.com/docs/githooks#_prepare_commit_msg
+# https://community.atlassian.com/t5/Bitbucket-questions/automatically-append-JIRA-issue-ID-into-commit-message/qaq-p/605991
+# -------------------------------------------------------
+
+hasCommitHeadRef=`git rev-list --all --max-count=1`
+
+if [[ "${COMMIT_SOURCE}" = message && $hasCommitHeadRef ]]; then
+
+	# Get current branch
+	branchName=`git rev-parse --abbrev-ref HEAD`
+
+	# Search jira issue id in a pattern such a "feature/ABC-123-description"
+	jiraId=$(echo $branchName | sed -nE 's,[a-z]+/([A-Z]+-[0-9]+)-.+,\1,p')
+
+	# Only prepare commit message if pattern matched and jiraId was found
+	if [[ ! -z $jiraId ]]; then
+		sed -i.bak -e "1s/^/$jiraId | /" "$COMMIT_MSG_FILE"
+	fi
+
+fi

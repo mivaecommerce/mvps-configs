@@ -1,0 +1,29 @@
+{
+  "name": "mvps-configs",
+  "version": "1.1.1",
+  "description": "A collection of recommended development configuration files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mivaecommerce/mvps-configs.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "symlink:all": "pnpm run symlink:eslint && pnpm run symlink:stylelint && pnpm run symlink:editorconfig && pnpm run symlink:phpcs && pnpm run symlink:package",
+    "symlink:editorconfig": "ln -sf $(pwd)/.editorconfig ~/",
+    "symlink:eslint": "ln -sf $(pwd)/.eslintrc.json ~/",
+    "symlink:package": "ln -sf $(pwd)/package.json ~/ && cd ~ && pnpm i",
+    "symlink:phpcs": "ln -sf $(pwd)/.phpcs.xml ~/",
+    "symlink:stylelint": "ln -sf $(pwd)/.stylelintrc.json ~/"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/eslint-plugin": "^7.17.7",
+    "@linthtml/linthtml": "^0.8.6",
+    "eslint": "^7.5.0",
+    "postcss": "^8.4.12",
+    "stylelint": "14.5.3",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-order": "^5.0.0"
+  }
+}
