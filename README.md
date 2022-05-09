@@ -42,8 +42,10 @@ A collection of recommended development configuration files
 		1. _Configure composer to allow global installs without admin rights?_
 		2. `$ composer global require "squizlabs/php_codesniffer=*"`
 6. _Optionally, install python, pip, & mkdocs (Coming Soon)_
-7. _Optionally, [Install VS Code](https://code.visualstudio.com/download)_
-	1. Install the language specific linter-packages
+7. [Install VS Code](https://code.visualstudio.com/download)
+	1. Install Miva IDE for syntax highlighting, snippets and tools for building websites with Miva.
+		1. [Miva IDE](https://marketplace.visualstudio.com/items?itemName=mhegler.vscode-miva-ide)
+	2. Install the language specific linter-packages
 		1. [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 		2. [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 		3. [PHPCS](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
